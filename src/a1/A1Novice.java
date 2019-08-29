@@ -44,10 +44,11 @@ public class A1Novice {
 				
 			}
 			
-			String.format("%.2f", sum);
+			
 			
 			// Prints to the console the first initial, last name, and order total in the format required
-			System.out.println(firstInitial + ". " + lastName + ":" + " " + sum);
+			
+			System.out.println(firstInitial + ". " + lastName + ":" + " " + String.format("%.2f", sum));
 			
 		}
 		
