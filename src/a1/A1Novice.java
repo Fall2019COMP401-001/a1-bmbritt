@@ -24,7 +24,7 @@ public class A1Novice {
 			int itemCounter = scan.nextInt();
 			
 			// Initializes the total to be 0 in the variable sum
-			float sum = 0;
+			double sum = 0;
 			
 			// This loop runs once for each *different* item in the customer's order
 			for (int k = 0; k < itemCounter; k++) {
@@ -36,7 +36,7 @@ public class A1Novice {
 				scan.next();
 				
 				// Initializes the total cost of each item to be its quantity multiplied by its price
-				float cost = itemQuantity * scan.nextFloat();
+				double cost = itemQuantity * scan.nextDouble();
 				
 				// Sums the total price of the order by adding the cost of each item as it is processed
 				sum = sum + cost;
@@ -44,6 +44,7 @@ public class A1Novice {
 				
 			}
 			
+			String.format("%.2f", sum);
 			
 			// Prints to the console the first initial, last name, and order total in the format required
 			System.out.println(firstInitial + ". " + lastName + ":" + " " + sum);
