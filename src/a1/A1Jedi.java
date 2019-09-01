@@ -30,33 +30,64 @@ public class A1Jedi {
 		
 		int numberOfCustomers = scan.nextInt();
 		
+		
+
+		
 		for (int i = 0; i < numberOfCustomers; i++) {
 			scan.next();
 			scan.next();
 			
+			
 			int numberOfDifferentItems = scan.nextInt();
+			int[] itemCountsInOrder = new int[numberOfItems];
+			for (int f = 0; f < itemCountsInOrder.length; f++) {
+				itemCountsInOrder[f] = 0;
+			}
+			
+			
+			
 			
 			
 			for (int j = 0; j < numberOfDifferentItems; j++) {
+				
 				int itemQuantity = scan.nextInt();
 				String itemName = scan.next();
+				
 				int numberPurchasedIndex = 0;
 				
 				for (int k = 0; k < itemNames.length; k++) {
+					
 					if (itemName.equals(itemNames[k])) {
 						numberPurchasedIndex = k;
-						customersBought[k] ++;
-						break;
+						//customersBought[k]++;
+						itemCountsInOrder[k]++;
+						
 					}
-				
-			
-				
 				}
 				
-				numberPurchased[numberPurchasedIndex] += itemQuantity;
 				
+				numberPurchased[numberPurchasedIndex] += itemQuantity;
 			}
+			for (int h = 0; h < itemCountsInOrder.length; h++) {
+				if (itemCountsInOrder[h] >= 1) {
+					customersBought[h]++;
+				}
+			}
+			
+			
 		}
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -71,5 +102,15 @@ public class A1Jedi {
 		}
 		
 		
+		
+
+		
+		
+		
+		
+		
 	}
 }
+
+
+
